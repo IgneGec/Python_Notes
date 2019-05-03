@@ -1,2 +1,1 @@
-# Python_Notes
-All docs, data, notes, projects related with learning python
+It is my first project with python. The main purpose is to learn new skills. The project is divided into 3 main parts: import historical weather data from website or other sources, create a database and create a visual board with matloplip.
