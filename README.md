@@ -7,8 +7,8 @@ Start: 26/04/2019
 End: 28/05/2019
 
 Stages: The project is divided into 2 main stages:
-First stage: import historical weather data from website - CLARIFY
-Second stage: produce a visualisation. Tools - BOKEH.
+First stage: import data from website - CLARIFY
+Second stage: produce a  dinamic visualisation. Tool: - BOKEH.
 
 Potential data source:
-http://apps.who.int/gho/data/node.main.CHILDHEALTH?lang=en
+http://apps.who.int/gho/data/node.main.122?lang=en
