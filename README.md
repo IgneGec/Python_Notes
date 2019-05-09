@@ -38,7 +38,7 @@ The dataset includes shoe name, brand, price, and more. Each shoe will have an e
 ### Import file into python:
 
 1. Install Pandas. Write in your terminal pip install pandas. 
->Panda is a python package for data analysis, time series, and statistics. VERY USEFUL TOOL IN THE DATA WORLD!!
+Panda is a python package for data analysis, time series, and statistics. VERY USEFUL TOOL IN THE DATA WORLD!!
 
 2. Open dataset. Use a script below:
 
@@ -52,12 +52,4 @@ df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna')
 
 
 
-
-
-
-
-
-
-
-Second stage: produce a  dinamic visualisation. Tool: - BOKEH.
 
