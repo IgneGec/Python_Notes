@@ -33,19 +33,17 @@ The dataset includes shoe name, brand, price, and more. Each shoe will have an e
 > SIZE:43.92 MB
 > Displaying 47 columns, 19,045 rows in table
 
-### Do you want to create the similar visualisation? If the answer is 'YES', follow steps below:
+## Do you want to create the similar visualisation? If the answer is 'YES', follow steps below:
 
-- Import file into python:
+### Import file into python:
 
 1. Install Pandas. Write in your terminal pip install pandas. 
 >Panda is a python package for data analysis, time series, and statistics. VERY USEFUL TOOL IN THE DATA WORLD!!
 
 2. Open dataset. Use a script below:
 
-```sh import pandas as pd
-df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna') ```
-
-
+```import pandas as pd
+df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna')
 
 
 
