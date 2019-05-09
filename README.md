@@ -47,9 +47,3 @@ df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna')
 
 
 
-
-
-
-
-
-
