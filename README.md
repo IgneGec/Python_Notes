@@ -14,10 +14,10 @@ An interactive plot on web-browsers which helps you immediately to get some usef
 >End: 28/05/2019
 
 ## Stages
+
 The project is divided into 2 main stages:
 
-- Import data from website: 
-[Node.js](https://data.world/datafiniti/womens-shoe-prices)
+- Import data from website: [Node.js](https://data.world/datafiniti/womens-shoe-prices)
 
 ### Data Summary
 
@@ -33,14 +33,15 @@ The project is divided into 2 main stages:
 
 ### Do you want to create the similar visualisation? If the answer is 'YES', follow steps below:
 
-- import file into python:
+- Import file into python:
 
 1. Install Pandas. Write in your terminal pip install pandas. 
-> Panda is a python package for data analysis, time series, and statistics. VERY USEFUL TOOL IN THE DATA WORLD!!
+>Panda is a python package for data analysis, time series, and statistics. VERY USEFUL TOOL IN THE DATA WORLD!!
 
 2. Open dataset. Use a script below:
-''' import pandas as pd
-df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna') '''
+
+```sh import pandas as pd
+df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna') ```
 
 
 
