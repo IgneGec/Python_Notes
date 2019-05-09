@@ -1,4 +1,4 @@
-Project name: 'How Much Do Women's Shoes Cost?'
+#Project name: 'How Much Do Women's Shoes Cost?'
 
 Goal: It is my first project with python. The main purpose is to learn new skills. 
 
@@ -29,9 +29,8 @@ Which ones have the widest distribution of prices?
 Is there a typical price distribution (e.g., normal) across brands or within specific brands?
 
 Steps to import file into python:
-1. Install Pandas. Write in your terminal pip install pandas. To check if you have installed pandas type pydoc modules
-
-
+1. Install Pandas. Write in your terminal pip install pandas. 
+Panda is a python package for data analysis, time series, and statistics
 
 Second stage: produce a  dinamic visualisation. Tool: - BOKEH.
 
