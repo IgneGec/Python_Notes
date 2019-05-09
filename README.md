@@ -20,9 +20,6 @@ SIZE:43.92 MB
 Displaying 47 columns, 19,045 rows in table
 
 Data Dictionary
-Column    Type
-id        
-
 
 
 
