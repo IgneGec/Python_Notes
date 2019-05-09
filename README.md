@@ -1,4 +1,4 @@
-`#`Project name: 'How Much Do Women's Shoes Cost?'
+    #Project: 'How Much Do Women's Shoes Cost?'
 
 Goal: It is my first project with python. The main purpose is to learn new skills. 
 
