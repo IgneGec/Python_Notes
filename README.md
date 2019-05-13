@@ -2,7 +2,7 @@
 
 An interactive plot on web-browsers which helps you immediately to get some useful insights from a dataset of 10,000 women's shoes and their product information. Using the plot you can easily get answers to those questions below:
 
-- What is the most popular shoes' brand?
+- Top 10 shoe brands!
 - What is the average price of each distinct brand listed?
 - Which brands have the highest prices?
 - Which ones have the widest distribution of prices?
@@ -33,15 +33,25 @@ The dataset includes shoe name, brand, price, and more. Each shoe will have an e
 > SIZE:43.92 MB
 > Displaying 47 columns, 19,045 rows in table
 
-## Do you want to create the similar visualisation? If the answer is 'YES', follow steps below:
+### Create visualisation 'TOP 10 shoe brands'. Follow steps below.
 
-### Import file into python:
+1. Clean and prepare data for visualisation. Use code below.
 
-1. Install Pandas. Write in your terminal pip install pandas. 
-Panda is a python package for data analysis, time series, and statistics. VERY USEFUL TOOL IN THE DATA WORLD!!
-
-2. Open dataset. Use a script below:
-
-```import pandas as pd
+```#import file.csv as dataframe
+import pandas as pd
 df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna')
+#create new dataframe just for column 'brand'
+n_df = df[['brand']]
+#count frequency of each brand
+n=10
+n1_df = n_df.merge(n_df['brand'].value_counts().to_frame(), how='left', left_on ='brand',
+           right_index = True, suffixes =('','x')).rename(columns = {'brandx':'brand_count'})
+#eliminate duplicates and get top 10
+n2_df = n1_df.drop_duplicates(['brand','brand_count'])
+final_df = n2_df.sort_values('brand_count',ascending=False).head(10)
+#reset indexes
+final_df = final_df.reset_index()
+del final_df['index']
+#to save dataframe as csv
+final_df.to_csv('data1_visual.csv', index=False)
 ```
