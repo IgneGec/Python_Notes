@@ -51,7 +51,8 @@ final_df.to_csv('data_visual.csv', index=False)
 ```
 2. Add manually column 'brand_logo' into file.
 3. Create a visualisation
-```from bokeh.plotting import figure, output_file, show, save, ColumnDataSource
+```
+from bokeh.plotting import figure, output_file, show, save, ColumnDataSource
 from bokeh.models.tools import HoverTool
 from bokeh.transform import factor_cmap
 from bokeh.palettes import Greys10
@@ -101,6 +102,7 @@ hovertooltips =hover.tooltips = """
   </div>
 """
 p.add_tools(hover)
-
 show(p)
+
+
 ```
