@@ -1,12 +1,6 @@
-# 'How Much Do Women's Shoes Cost?'
+# 'Taking Data Visualisation to Another Level'
 
-An interactive plot on web-browsers which helps you immediately to get some useful insights from a dataset of 10,000 women's shoes and their product information. Using the plot you can easily get answers to those questions below:
-
-- Top 10 shoe brands!
-- What is the average price of each distinct brand listed?
-- Which brands have the highest prices?
-- Which ones have the widest distribution of prices?
-- Is there a typical price distribution (e.g., normal) across brands or within specific brands?
+Testing what kind of amazing visualisations you can create by python.
 
 ## Project Goal: 
 
@@ -15,13 +9,13 @@ It is my first project with python. The main purpose is to learn new skills.
 - Start: 26/04/2019
 - End: 28/05/2019
 
-## Stages
+## First Visualisation 'Top 10 shoe brands'
 
-The project is divided into 2 main stages:
+## Data
 
 - Import data from website: [Node.js](https://data.world/datafiniti/womens-shoe-prices)
 
-### Data Summary
+# Data Summary
 
 This is a list of 10,000 women's shoes and their product information provided by Datafiniti's Product Database.
 The dataset includes shoe name, brand, price, and more. Each shoe will have an entry for each price found for it and some shoes may have > multiple entries.
@@ -33,7 +27,7 @@ The dataset includes shoe name, brand, price, and more. Each shoe will have an e
 > SIZE:43.92 MB
 > Displaying 47 columns, 19,045 rows in table
 
-### Create visualisation 'TOP 10 shoe brands'. Follow steps below.
+# Steps to get a final visualisation 
 
 1. Clean and prepare data for visualisation. Use code below.
 
@@ -55,3 +49,4 @@ del final_df['index']
 #to save dataframe as csv
 final_df.to_csv('data1_visual.csv', index=False)
 ```
+
