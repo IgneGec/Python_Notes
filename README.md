@@ -59,7 +59,7 @@ from bokeh.palettes import Greys10
 from bokeh.embed import components
 output_file('index.html')
 output_file("background.html")
-df = pd.read_csv('data_visual.csv')
+df = pd.read_csv('data_visual1.csv')
 source = ColumnDataSource(df)
 
 brand_list = source.data['brand'].tolist()
