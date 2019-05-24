@@ -1,10 +1,6 @@
-# 'Taking Data Visualisation to Another Level'
+# 'Taking Data Visualization to Another Level'
 
-Testing what kind of amazing visualisations you can create by python.
-
-## Project Goal: 
-
-It is my first project with python. The main purpose is to learn new skills. 
+It is my first project with python. The main purpose is to learn new skills and check out what you can do with python from data science prospectives. I've chosen to test out few libraries such as PANDAS, BOKEH, PLOTLY.Testing what kind of amazing visualisations you can create by python.
 
 - Start: 26/04/2019
 - End: 28/05/2019
