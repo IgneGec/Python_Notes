@@ -1,24 +1,37 @@
-#Clean data and prepare for visualisation
+
+#1.clean data and prepare for visualisation
+
+#install libraries
 
 import pandas as pd
+
+#download data
+
 df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna')
+
 #create new dataframe just for column 'brand'
+
 n_df = df[['brand']]
+
 #count frequency of each brand
-n=10
-n1_df = n_df.merge(n_df['brand'].value_counts().to_frame(), how='left', left_on ='brand',
-           right_index = True, suffixes =('','x')).rename(columns = {'brandx':'brand_count'})
+n1_df = n_df.merge(n_df['brand'].value_counts().to_frame(),
+how='left', left_on ='brand',
+right_index = True, suffixes =('','x')).rename(columns = {'brandx':'brand_count'})
+
 #eliminate duplicates and get top 10
+
 n2_df = n1_df.drop_duplicates(['brand','brand_count'])
 final_df = n2_df.sort_values('brand_count',ascending=False).head(10)
+
 #reset indexes
 final_df = final_df.reset_index()
 del final_df['index']
+
 #to save dataframe as csv
 final_df.to_csv('data_visual.csv', index=False)
 
-#Visualisation
-
+#2.Visualization
+#import libraries
 from bokeh.plotting import figure, output_file, show, save, ColumnDataSource
 from bokeh.models.tools import HoverTool
 from bokeh.transform import factor_cmap
@@ -26,9 +39,13 @@ from bokeh.palettes import Greys10
 from bokeh.embed import components
 output_file('index.html')
 output_file("background.html")
+
+#download data
+
 df = pd.read_csv('data_visual1.csv')
 source = ColumnDataSource(df)
 
+# data into list for graph
 brand_list = source.data['brand'].tolist()
 
 p = figure(
