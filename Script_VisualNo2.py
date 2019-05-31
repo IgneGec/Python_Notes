@@ -1,8 +1,18 @@
 #needed libraries
 
-import plotly.plotly as py
-import plotly.graph_objs as go
 import pandas as pd
+from plotly import __version__
+%matplotlib inline
+import plotly.offline as pyo
+import plotly.graph_objs as go
+from plotly.offline import iplot
+import cufflinks as cf
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot 
+init_notebook_mode(connected=True)
+
+init_notebook_mode(connected=True)
+cf.go_offline()
+
 
 # import a file
 
@@ -78,6 +88,8 @@ layout = go.Layout(
 
 
 fig = go.Figure(data = data, layout = layout)
-py.iplot(fig, filename = 'd3-cloropleth-map')
+#pyo.iplot(fig, filename = 'd3-cloropleth-map')
 
-#url = py.plot(fig, filename='d3-cloropleth-map')
+url = pyo.plot(fig, filename='d3-cloropleth-map')
+
+
