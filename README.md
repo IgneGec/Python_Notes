@@ -22,7 +22,7 @@ Once you've done this, you are ready to install pandas, bokeh and plotly. Just r
 
 ### Data
 
-- Import data from website: [Node.js](https://data.world/datafiniti/womens-shoe-prices)
+- Import data from website: [Data](https://data.world/datafiniti/womens-shoe-prices)
 
 ### Data Summary
 
