@@ -18,53 +18,28 @@ Once you've done this, you are ready to install pandas, bokeh and plotly. Just r
  conda install bokeh
  conda install plotly
 
-## First Visualization 'Top 10 shoe brands'
-
-### Data
-
-- Import data from website: [Data](https://data.world/datafiniti/womens-shoe-prices)
-
-### Data Summary
-
-This is a list of 10,000 women's shoes and their product information provided by Datafiniti's Product Database.
-The dataset includes shoe name, brand, price, and more. Each shoe will have an entry for each price found for it and some shoes may have > multiple entries.
-
-> Dataset information
-> LAST MODIFIED: April 24, 2017
-> OWNER: @datafiniti
-> CREATED: April 24, 2017
-> SIZE:43.92 MB
-> Displaying 47 columns, 19,045 rows in table
-
-### Steps to get a final visualization 
-
-1. Clean and prepare data.
-2. Add manually column 'brand_logo' into file.
-3. Create a visualization.
-
-####################################################################################################
-
-## Second Visualization 'Population's distribution in USA'
-
-### Data
-
-- Import data. 
-
-### Data Summary
-
-This is a file of 33,099 rows about states and cities in USA.
+## Some Hints
+I used UPYTER NOTEBOOK to create visualizations. I believe this is the easiest way to get nice graphs.
 
 
-> Dataset information
-> LAST MODIFIED: March 5, 2019
-> CREATED: March 5, 2019
-> SIZE:4.93 MB
-> Displaying 16 columns, 33,099 rows in table
+## Visualizations
 
-### Steps to get a final visualization 
+1. 'Top 10 shoe brands'
+2. 'Population's distribution in USA'
 
-1. Clean and prepare data for visualisation.
-2. Create a visualization.
-[My final project](http://rotten-battle.surge.sh/)
+## Last Steps
+
+Both graphs are displayed on HTML and then deployed with surge.sh.
+[HTML FOR BEGINNERS](https://www.w3schools.com/html/default.asp)
+[SURGE.SH](https://surge.sh/)
+
+
+## [My final project](http://rotten-battle.surge.sh/)
+
+
+
+
+
+
 
 
