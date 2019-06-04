@@ -1,27 +1,19 @@
-
 #1.clean data and prepare for visualisation
 
 #install libraries
 
 import pandas as pd
-
 #download data
-
 df = pd.read_csv('https://query.data.world/s/rgxzfnoqy4kk35y2a4uloqq5cd4wna')
-
 #create new dataframe just for column 'brand'
-
 n_df = df[['brand']]
-
 #count frequency of each brand
-n1_df = n_df.merge(n_df['brand'].value_counts().to_frame(),
-how='left', left_on ='brand',
+n1_df = n_df.merge(n_df['brand'].value_counts().to_frame(),# add new column to frame
+how='left', left_on ='brand',#show where to add
 right_index = True, suffixes =('','x')).rename(columns = {'brandx':'brand_count'})
-
 #eliminate duplicates and get top 10
-
 n2_df = n1_df.drop_duplicates(['brand','brand_count'])
-final_df = n2_df.sort_values('brand_count',ascending=False).head(10)
+final_df = n2_df.sort_values('brand_count',ascending=False).head(10)# sort out and extract top 10
 
 #reset indexes
 final_df = final_df.reset_index()
@@ -29,6 +21,9 @@ del final_df['index']
 
 #to save dataframe as csv
 final_df.to_csv('data_visual.csv', index=False)
+
+#data for actual visual is ready to go..however, needed 
+#to add manualy extra columns with each company logo
 
 #2.Visualization
 #import libraries
@@ -38,16 +33,15 @@ from bokeh.transform import factor_cmap
 from bokeh.palettes import Greys10
 from bokeh.embed import components
 output_file('index.html')
-output_file("background.html")
 
 #download data
-
-df = pd.read_csv('data_visual1.csv')
+df = pd.read_csv('data_visual1.csv') # find in my repository
 source = ColumnDataSource(df)
 
 # data into list for graph
 brand_list = source.data['brand'].tolist()
 
+#add features to diagram
 p = figure(
     y_range = brand_list,
     plot_width = 600,
@@ -87,4 +81,5 @@ hovertooltips =hover.tooltips = """
 """
 p.add_tools(hover)
 show(p)
+
 
