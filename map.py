@@ -1,5 +1,5 @@
-#needed libraries
-
+#install needed libraries
+import dash_html_components as html
 import pandas as pd
 from plotly import __version__
 %matplotlib inline
@@ -9,25 +9,18 @@ from plotly.offline import iplot
 import cufflinks as cf
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot 
 init_notebook_mode(connected=True)
-
-init_notebook_mode(connected=True)
 cf.go_offline()
 
-
 # import a file
-
 df = pd.read_csv('map_data.csv')
 
 # clean a file and extract only needed columns
-
 df_new=df[['state_id','state_name','population']]   
 
 # add population by states
-
 n_df = df_new.groupby(['state_id','state_name'])['population'].sum().reset_index()
 
 #add thousands separators into column 'population'
-
 n_df['population2'] = n_df.apply(lambda x: "{:,}".format(x['population']), axis=1)
 
 for col in n_df.columns:
@@ -44,7 +37,6 @@ scl = [
 ]
 
 # set text for tooltip
-
 n_df['text'] = n_df['state_name'] + '<br>' + \
 'Population: '+ n_df['population2']
 
@@ -88,8 +80,5 @@ layout = go.Layout(
 
 
 fig = go.Figure(data = data, layout = layout)
-#pyo.iplot(fig, filename = 'd3-cloropleth-map')
 
 url = pyo.plot(fig, filename='d3-cloropleth-map')
-
-
